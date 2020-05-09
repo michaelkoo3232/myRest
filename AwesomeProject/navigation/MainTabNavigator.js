@@ -19,20 +19,27 @@ const LoginStack = createStackNavigator(
   {
     Login: {screen: LoginScreen},
     Register: {screen: RegisterScreen},
-  }
+  },
+  {
+    headerMode: 'none',
+    }
 );
 
 const HomeStack = createBottomTabNavigator(
   {
     Products: {screen: ProductsScreen},
-    Order: {screen: OrderScreen},
+    Order: {screen: OrderScreen, defaultNavigationOptions:{
+      headerTintColor: 'blue',
+      tabBarVisible: false
+    }},
     Record: {screen: RecordScreen},
     Profile: {screen: ProfileScreen},
   },
   {
-  headerMode: 'none',
+  headerMode: 'screen',
   }
 );
+
 
 
 export default createSwitchNavigator(

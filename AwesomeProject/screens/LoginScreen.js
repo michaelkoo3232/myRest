@@ -7,7 +7,8 @@ import {
   ScrollView,
   View,
   KeyboardAvoidingView,
-  Platform
+  Platform,
+  StatusBar
 } from "react-native";
 import {
   Button,
@@ -30,11 +31,7 @@ export default class HomeScreen extends Component {
   }
 
   // navigationOptions used to configure screen
-  static navigationOptions = {
-    // Setup the page Header
-    title: "Sign In"
-  };
-
+ 
   // a function for handle the login button pressed
   submitLogin = async (username, password) => {
     // call login function from services/Api.js with username and password
@@ -86,6 +83,12 @@ export default class HomeScreen extends Component {
     return (
       // <ImageBackground> component is similar with the web is background-image
       <KeyboardAvoidingView style={styles.container} behavior={Platform.OS == "ios" ? "padding" : "height"}>
+        <StatusBar
+          backgroundColor="#b3e6ff"
+          barStyle="dark-content"
+          hidden={true}
+          translucent={true}
+        />
       <ImageBackground
         source={require("../assets/images/login_bg.jpeg")}
         style={styles.imageBackground}
@@ -187,7 +190,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    marginVertical: 20
+    
   },
   imageBackground: {
     width: "100%",

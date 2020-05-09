@@ -1,9 +1,10 @@
 {
-  "devToolsPort": 19002,
+  "expoServerNgrokUrl": "https://kk-b52.anonymous.awesomeproject.exp.direct",
+  "packagerNgrokUrl": "https://packager.kk-b52.anonymous.awesomeproject.exp.direct",
+  "ngrokPid": 16732,
   "expoServerPort": 19000,
-  "packagerPort": 19001,
-  "packagerPid": 20620,
-  "expoServerNgrokUrl": "https://ux-ci8.anonymous.awesomeproject.exp.direct",
-  "packagerNgrokUrl": "https://packager.ux-ci8.anonymous.awesomeproject.exp.direct",
-  "ngrokPid": 20639
+  "packagerPort": null,
+  "packagerPid": null,
+  "webpackServerPort": null,
+  "devToolsPort": 19002
 }

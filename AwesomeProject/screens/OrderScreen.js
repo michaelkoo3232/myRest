@@ -11,7 +11,9 @@ import {
     View,
     //WebView,
     Dimensions,
-    SafeAreaView
+    SafeAreaView,
+    TouchableOpacity,
+    Header
 } from "react-native";
 import {
     Avatar,
@@ -263,6 +265,7 @@ export default class OrderScreen extends Component {
             // display detail
             const url = selected_product.picture;
             contentView = (
+                
                 <View >
                     <View style={{ flexDirection: 'column' }}>
                         <View >
@@ -272,6 +275,9 @@ export default class OrderScreen extends Component {
 
                             />
                         </View>
+                        <TouchableOpacity>
+                                <Image Srouce={require("../assets/images/arrow-ios-back.png")} style={{width:50,height:50}}></Image>
+                            </TouchableOpacity>
                         <View style={{ backgroundColor: "orange" }}>
                             <View style={style.textContainer01}>
                                 <Text style={{ fontSize: 50, color: "white" }}> {selected_product.name} </Text>
@@ -317,7 +323,6 @@ export default class OrderScreen extends Component {
                                 style={{
                                     width: this.state.width,
                                     paddingRight: 20,
-                                    PaddingTop: 30,
 
                                 }}
                                 date={this.state.deliver_date}
@@ -402,8 +407,14 @@ export default class OrderScreen extends Component {
         }
         // render Order Screen
         return (
-            <SafeAreaView>
-                <ScrollView>
+            
+            <View>
+                <View style={{paddingTop:10}}>
+                <TouchableOpacity title="Press me" onPress={() => this.props.navigation.navigate('Products')} >
+                    <Image style={{ height:40, width: 40 }} source={require("../assets/images/arrow-ios-back.png")} />
+                    </TouchableOpacity>
+                </View>
+                 <ScrollView>
 
                 <Overlay
                     isVisible={this.state.isModalVisible}
@@ -417,7 +428,7 @@ export default class OrderScreen extends Component {
 
                 </ScrollView>
                 
-            </SafeAreaView>
+            </View>
         );
     }
 
@@ -436,7 +447,9 @@ const style = StyleSheet.create({
 
     },
     dateContainer: {
-        paddingTop: 10,
+        paddingRight: 20,
+        paddingTop: 30,
+        
         paddingLeft: 10
     }
 

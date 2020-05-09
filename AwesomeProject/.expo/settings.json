@@ -1,8 +1,8 @@
 {
+  "urlRandomness": "kk-b52",
   "hostType": "lan",
   "lanType": "ip",
   "dev": true,
   "minify": false,
-  "urlRandomness": "ux-ci8",
-  "https": false
+  "https": true
 }

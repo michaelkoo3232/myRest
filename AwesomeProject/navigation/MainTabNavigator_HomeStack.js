@@ -28,9 +28,27 @@ const HomeStack = createBottomTabNavigator(
     Profile: {screen: ProfileScreen},
   },
   {
-  headerMode: 'none',
+  headerMode: 'screen',
+
   }
 );
+
+HomeStack.navigationOptions = ({ navigation }) => {
+  let tabBarVisible;
+  
+    navigation.state.routes.map(route => {
+      if (route.routeName === "Order") {
+        tabBarVisible = false;
+      } else {
+        tabBarVisible = true;
+      }
+    });
+  
+
+  return {
+    tabBarVisible
+  };
+};
 
 
 export default createSwitchNavigator(
