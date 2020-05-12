@@ -29,7 +29,7 @@ const HomeStack = createBottomTabNavigator(
   {
     Products: {screen: ProductsScreen},
     Order: {screen: OrderScreen, defaultNavigationOptions:{
-      headerTintColor: 'blue',
+     
       tabBarVisible: false
     }},
     Record: {screen: RecordScreen},

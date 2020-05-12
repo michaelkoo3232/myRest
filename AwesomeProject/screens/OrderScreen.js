@@ -178,6 +178,7 @@ export default class OrderScreen extends Component {
         //     selected_product.id + ":order=" + order_quantity + ":total_amount=" + total_amount
         // );
         // following checking prevent users no input or invalid input
+        console.log("current State: ",this.state);
         if (total_amount == 0 || order_quantity == 0) {
             Alert.alert(
                 'Warning',
@@ -209,6 +210,9 @@ export default class OrderScreen extends Component {
             product_id: selected_product.id,
             quantity: order_quantity,
             total_amount: total_amount,
+            deliver_date: this.state.deliver_date,
+            deliver_time: this.state.deliver_time,
+            address: this.state.address
             // deliver_date: deliver_date
         }).then(response => {
             // using then to handle next operation after received response
@@ -313,9 +317,9 @@ export default class OrderScreen extends Component {
                             <Input
                                 keyboardType="default"
                                 //value={`${this.state.order_quantity}`}
-                                onChangeText={this.inputQty}
+                                onChangeText={(text)=>{this.setState({address:text})}}
                                 clearTextOnFocus={true} //only work on IOS
-
+                            
                             />
                         </View>
                         <View style={style.dateContainer}>
@@ -395,7 +399,7 @@ export default class OrderScreen extends Component {
                             title="ORDER"
                             icon={{ name: "payment" }}
                             backgroundColor="#03A9F4"
-                            buttonStyle={{ borderRadius: 0, marginTop: 100 }}
+                            buttonStyle={{ borderRadius: 0, marginTop: 100 , marginBottom: 60 }}
                             onPress={this.onPressSubmit}
                         />
                         
