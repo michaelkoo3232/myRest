@@ -13,7 +13,6 @@ export default class RecordScreen extends Component {
             
         }
 
-
     }
 
     static navigationOptions = {
