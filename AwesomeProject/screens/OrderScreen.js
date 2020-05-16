@@ -182,7 +182,7 @@ export default class OrderScreen extends Component {
         if (total_amount == 0 || order_quantity == 0) {
             Alert.alert(
                 'Warning',
-                'Please input your need',
+                'Please input your quantity',
                 [
                     { text: 'OK' },
                 ], { cancelable: false },
@@ -284,17 +284,16 @@ export default class OrderScreen extends Component {
                             </TouchableOpacity>
                         <View style={{ backgroundColor: "orange" }}>
                             <View style={style.textContainer01}>
-                                <Text style={{ fontSize: 50, color: "white" }}> {selected_product.name} </Text>
+                                <Text style={{ fontSize: 40, color: "white" }}> {selected_product.name} </Text>
                             </View>
                         </View>
                         <View style={style.textContainer}>
-                            <Text style={style.text01}>Description: {selected_product.description}</Text>
-                            <Text style={style.text01}>Quantity: {selected_product.quantity}</Text>
-                            <Text style={style.text01}>Discount: {selected_product.discount}</Text>
-                            <Text style={style.text01}>Price: ${selected_product.price}</Text>
+                            <Text style={style.text02}>{selected_product.description}</Text>
+                            <Text style={style.text01}>{selected_product.quantity} Left in stock</Text>
+                            <Text style={style.text03}>${selected_product.price}</Text>
                         </View>
                         <View style={style.textContainer}>
-                            <Text style={style.text01}>Input Your need</Text>
+                            <Text style={style.text01}>Quantity</Text>
                             <Input
 
                                 // containerStyle={{
@@ -312,7 +311,7 @@ export default class OrderScreen extends Component {
 
                         <View style={style.textContainer}>
 
-                            <Text style={style.text01}>Input Your Address</Text>
+                            <Text style={style.text01}>Delivery Address</Text>
 
                             <Input
                                 keyboardType="default"
@@ -397,7 +396,7 @@ export default class OrderScreen extends Component {
                         </View>
                         <Button
                             title="ORDER"
-                            icon={{ name: "payment" }}
+                            icon={{ name: "payment", color: "white"}}
                             backgroundColor="#03A9F4"
                             buttonStyle={{ borderRadius: 0, marginTop: 100 , marginBottom: 60 }}
                             onPress={this.onPressSubmit}
@@ -448,6 +447,16 @@ const style = StyleSheet.create({
     },
     text01: {
         fontSize: 20
+
+    },
+    text02: {
+        fontSize: 20,
+        color: "grey"
+    
+    },
+    text03: {
+        fontSize: 20,
+        color: "red"
 
     },
     dateContainer: {
