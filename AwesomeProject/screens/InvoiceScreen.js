@@ -78,7 +78,7 @@ export default class RecordScreen extends Component {
                         (
                             
                             
-                            <Card>
+                            <Card key={i.toString()}>
                             <Text>
                                 {this.state.recordList[i].invoice_no}
                             </Text>

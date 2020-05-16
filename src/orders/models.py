@@ -22,6 +22,9 @@ class Order(models.Model):
     def __str__(self):
         return str(self.invoice_no)
 
+    class Meta:
+        ordering = ['-created']
+
     def save(self, *args, **kwargs):
         if not self.invoice_no:  # new order
             self.invoice_no = generating_invoice()  # generate new invoice number

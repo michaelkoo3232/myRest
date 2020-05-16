@@ -19,14 +19,29 @@ export default class RegisterScreen extends Component {
     }
   }
 
+  componentDidMount() {
+    this.componentsMounted = true;
+    if (this.componentsMounted) {
+      AsyncStorage.getItem("username").then((username) => {
+        console.log(username);
+        this.setState({
+          username: username,
+        });
+      });
+    }
+  };
+
+
+
   render() {
     return (
       <View style={{ flex: 1, justifyContent:'center', alignItems: 'center' }}>
+        <Text style={{fontWeight:'bold',fontSize:20}}>Hi,{this.state.username}</Text>
         <Button
           // submit button
           title='Logout'
           onPress={ () => this.logout() }
-        />
+        />  
       </View>
     )
   }
@@ -39,3 +54,4 @@ export default class RegisterScreen extends Component {
   }
 
 }
+
