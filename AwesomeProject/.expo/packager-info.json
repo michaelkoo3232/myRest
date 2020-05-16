@@ -1,10 +1,10 @@
 {
   "expoServerNgrokUrl": "https://kk-b52.anonymous.awesomeproject.exp.direct",
   "packagerNgrokUrl": "https://packager.kk-b52.anonymous.awesomeproject.exp.direct",
-  "ngrokPid": 15688,
+  "ngrokPid": 34928,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 8344,
+  "packagerPid": 34916,
   "webpackServerPort": null,
   "devToolsPort": 19002
 }

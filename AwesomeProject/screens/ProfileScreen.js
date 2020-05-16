@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import {
   AsyncStorage,
-  View
+  View,
+  Text
 } from 'react-native';
 import {
   Button

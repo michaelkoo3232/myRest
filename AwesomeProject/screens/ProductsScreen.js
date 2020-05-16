@@ -102,12 +102,7 @@ export default class ProductsScreen extends Component {
     });
   }
   
-  logout = async () => {
-    // Authentication Part
-   
-    await AsyncStorage.clear();
-    this.props.navigation.navigate("AuthLoading");
-  }
+
 
   // this is the main function to display a page
   render() {
@@ -135,13 +130,8 @@ export default class ProductsScreen extends Component {
           translucent={true}
         />
         {/* header bar  */}
-        <View style={{ height: 100, backgroundColor: 'orange' , justifyContent: 'space-between',flexDirection:"row"}}>
-          <Text style={{fontWeight:'bold',fontSize:20}}>Hi,{username}</Text>
-          <TouchableOpacity title="Press me" onPress={() => this.logout() } >
-                <Text style={{fontWeight:'bold',fontSize:20}}>Logout </Text>
-            </TouchableOpacity>
-        </View>
-        <View style={{ marginBottom: 200 }}>
+
+
 
           <FlatList
             data={this.state.dataSource}
@@ -157,12 +147,10 @@ export default class ProductsScreen extends Component {
                     <Image style={{ height: this.state.width - 20, width: this.state.width - 20 }} source={{
                       uri: item.picture,
                     }} />
-                    <View style={{ height: 100 }}>
-                      <Text style={{ fontWeight: 'bold', fontSize: 40 }}>{item.name}</Text>
-
+                    <View style={{ height: 30 }}>
+                      <Text style={{ fontWeight: 'bold', fontSize: 25 }}>{item.name}</Text>
                     </View>
-                    <Text style={{ fontWeight: '300', color: 'grey', fontSize: 20 }}>{item.description}</Text>
-                    <Text style={{ fontSize: 30 }}>Price: ${item.price}</Text>
+                    <Text style={{ fontSize: 25 }}> ${item.price}</Text>
 
 
                   </TouchableOpacity>
@@ -171,7 +159,6 @@ export default class ProductsScreen extends Component {
             )}
           />
 
-        </View>
       </SafeAreaView>
     );
   }

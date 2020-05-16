@@ -13,7 +13,7 @@ import RegisterScreen from '../screens/RegisterScreen';
 import OrderScreen from '../screens/OrderScreen';
 import ProductsScreen from '../screens/ProductsScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import RecordScreen from '../screens/RecordScreen'
+import InvoiceScreen from '../screens/InvoiceScreen'
 
 const LoginStack = createStackNavigator(
   {
@@ -32,7 +32,7 @@ const HomeStack = createBottomTabNavigator(
      
       tabBarVisible: false
     }},
-    Record: {screen: RecordScreen},
+    Inovice: {screen: InvoiceScreen},
     Profile: {screen: ProfileScreen},
   },
   {

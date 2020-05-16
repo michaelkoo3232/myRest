@@ -17,7 +17,7 @@ export default class RecordScreen extends Component {
     }
 
     static navigationOptions = {
-        title: 'Record',
+        title: 'Invoice',
     };
 
     componentWillUnmount() {
