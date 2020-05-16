@@ -274,9 +274,8 @@ export default class OrderScreen extends Component {
                     <View style={{ flexDirection: 'column' }}>
                         <View >
                             <Image
-                                style={{ width: this.state.width, height: this.state.width }}
+                                style={{ width: this.state.width, height: this.state.height }}
                                 source={{ uri: selected_product.picture }}
-
                             />
                         </View>
                         <TouchableOpacity>
@@ -440,7 +439,6 @@ const style = StyleSheet.create({
     textContainer: {
         paddingTop: 10,
         paddingLeft: 10
-
     },
     textContainer01: {
 
