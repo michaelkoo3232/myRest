@@ -289,7 +289,7 @@ export default class OrderScreen extends Component {
                         <View style={style.textContainer}>
                             <Text style={style.text02}>{selected_product.description}</Text>
                             <Text style={style.text01}>{selected_product.quantity} Left in stock</Text>
-                            <Text style={style.text03}>${selected_product.price}</Text>
+                            <Text style={style.text01}>${selected_product.price}</Text>
                         </View>
                         <View style={style.textContainer}>
                             <Text style={style.text01}>Quantity</Text>
@@ -441,21 +441,14 @@ const style = StyleSheet.create({
         paddingLeft: 10
     },
     textContainer01: {
-
     },
     text01: {
         fontSize: 20
-
     },
     text02: {
         fontSize: 20,
         color: "grey"
     
-    },
-    text03: {
-        fontSize: 20,
-        color: "red"
-
     },
     dateContainer: {
         paddingRight: 20,

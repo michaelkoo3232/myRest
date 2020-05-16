@@ -5,6 +5,12 @@ import {
   createSwitchNavigator
 } from 'react-navigation';
 
+import {
+  Icon
+} from 'react-native-elements';
+
+import { Ionicons } from '@expo/vector-icons';
+
 import TabBarIcon from '../components/TabBarIcon';
 
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
@@ -27,7 +33,7 @@ const LoginStack = createStackNavigator(
 
 const HomeStack = createBottomTabNavigator(
   {
-    Products: {screen: ProductsScreen},
+    Products: {screen: ProductsScreen}, 
     Order: {screen: OrderScreen, defaultNavigationOptions:{
      
       tabBarVisible: false
