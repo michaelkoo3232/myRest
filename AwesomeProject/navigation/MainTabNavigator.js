@@ -6,6 +6,9 @@ import {
 } from 'react-navigation';
 
 import TabBarIcon from '../components/TabBarIcon';
+import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
+
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 import AuthLoadingScreen from '../screens/AuthLoadingScreen';
 import LoginScreen from '../screens/LoginScreen';
@@ -27,13 +30,41 @@ const LoginStack = createStackNavigator(
 
 const HomeStack = createBottomTabNavigator(
   {
-    Products: {screen: ProductsScreen},
-    Order: {screen: OrderScreen, defaultNavigationOptions:{
-     
-      tabBarVisible: false
-    }},
-    Record: {screen: RecordScreen},
-    Profile: {screen: ProfileScreen},
+    Products: {
+      screen: ProductsScreen,
+      navigationOptions: {
+        tabBarLabel: 'Product',
+        tabBarIcon: ({tintColor, activeTintColor}) => (
+           <Icon name="apple-alt" size={30} color={tintColor} />
+           )
+      },
+    },
+    Order: {
+      screen: OrderScreen, 
+      navigationOptions: {
+        tabBarLabel: 'Order',
+        tabBarIcon: ({tintColor, activeTintColor}) => (
+           <Icon name="shopping-bag" size={30} color={tintColor} />
+           )
+      },
+    },
+    Record: {
+      screen: RecordScreen,
+      navigationOptions: {
+        tabBarLabel: 'Record',
+        tabBarIcon: ({tintColor, activeTintColor}) => (
+           <Icon name="money-check-alt" size={30} color={tintColor} />
+           )
+      },
+    },
+    Profile: {
+      screen: ProfileScreen,
+      navigationOptions: {
+        tabBarLabel: 'Profile',
+        tabBarIcon: ({tintColor, activeTintColor}) => (
+           <Icon name="user" size={30} color={tintColor} />
+           )
+      },},
   },
   {
   headerMode: 'screen',

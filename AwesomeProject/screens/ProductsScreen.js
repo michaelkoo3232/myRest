@@ -126,7 +126,7 @@ export default class ProductsScreen extends Component {
     // render the product list
     const cols = 2;
     return (
-      <SafeAreaView style={{ flexDirection: 'column' }}>
+      <SafeAreaView style={{ flexDirection: 'column', backgroundColor: 'orange' }}>
         {/* hiding status bar  */}
         <StatusBar
           backgroundColor="#b3e6ff"
@@ -141,7 +141,7 @@ export default class ProductsScreen extends Component {
                 <Text style={{fontWeight:'bold',fontSize:20}}>Logout </Text>
             </TouchableOpacity>
         </View>
-        <View style={{ marginBottom: 200 }}>
+        <View style={{ marginBottom: 200 ,backgroundColor: 'white'}}>
 
           <FlatList
             data={this.state.dataSource}
@@ -158,10 +158,10 @@ export default class ProductsScreen extends Component {
                       uri: item.picture,
                     }} />
                     <View style={{ height: 100 }}>
-                      <Text style={{ fontWeight: 'bold', fontSize: 40 }}>{item.name}</Text>
+                      <Text style={{ fontWeight: 'bold', fontSize: 30 }}>{item.name}</Text>
 
                     </View>
-                    <Text style={{ fontWeight: '300', color: 'grey', fontSize: 20 }}>{item.description}</Text>
+
                     <Text style={{ fontSize: 30 }}>Price: ${item.price}</Text>
 
 
