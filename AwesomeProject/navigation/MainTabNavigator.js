@@ -5,9 +5,6 @@ import {
   createSwitchNavigator
 } from 'react-navigation';
 
-import {
-  Icon
-} from 'react-native-elements';
 
 import { Ionicons } from '@expo/vector-icons';
 
@@ -54,10 +51,10 @@ const HomeStack = createBottomTabNavigator(
            )
       },
     },
-    Record: {
-      screen: RecordScreen,
+    Invoice: {
+      screen: InvoiceScreen,
       navigationOptions: {
-        tabBarLabel: 'Record',
+        tabBarLabel: 'Invoice',
         tabBarIcon: ({tintColor, activeTintColor}) => (
            <Icon name="money-check-alt" size={30} color={tintColor} />
            )
