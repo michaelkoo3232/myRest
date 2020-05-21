@@ -288,7 +288,7 @@ export default class OrderScreen extends Component {
                         </View>
                         <View style={style.textContainer}>
                             <Text style={style.text02}>{selected_product.description}</Text>
-                            <Text style={style.text01}>{selected_product.quantity} Left in stock</Text>
+                            <Text style={style.text01}>{selected_product.quantity} left in stock</Text>
                             <Text style={style.text01}>${selected_product.price}</Text>
                         </View>
                         <View style={style.textContainer}>

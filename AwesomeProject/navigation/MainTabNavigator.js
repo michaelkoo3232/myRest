@@ -38,7 +38,7 @@ const HomeStack = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Product',
         tabBarIcon: ({tintColor, activeTintColor}) => (
-           <Icon name="apple-alt" size={30} color={tintColor} />
+           <Icon name="apple-alt" size={25} color={tintColor} />
            )
       },
     },
@@ -47,7 +47,7 @@ const HomeStack = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Order',
         tabBarIcon: ({tintColor, activeTintColor}) => (
-           <Icon name="shopping-bag" size={30} color={tintColor} />
+           <Icon name="shopping-bag" size={25} color={tintColor} />
            )
       },
     },
@@ -56,7 +56,7 @@ const HomeStack = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Invoice',
         tabBarIcon: ({tintColor, activeTintColor}) => (
-           <Icon name="money-check-alt" size={30} color={tintColor} />
+           <Icon name="money-check-alt" size={25} color={tintColor} />
            )
       },
     },
@@ -65,7 +65,7 @@ const HomeStack = createBottomTabNavigator(
       navigationOptions: {
         tabBarLabel: 'Profile',
         tabBarIcon: ({tintColor, activeTintColor}) => (
-           <Icon name="user" size={30} color={tintColor} />
+           <Icon name="user" size={25} color={tintColor} />
            )
       },},
   },
