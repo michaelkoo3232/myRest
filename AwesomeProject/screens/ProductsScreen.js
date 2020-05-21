@@ -152,12 +152,12 @@ export default class ProductsScreen extends Component {
                     <Image style={{ height: this.state.width - 20, width: this.state.width - 20 }} source={{
                       uri: item.picture,
                     }} />
-                    <View style={{ height: 100 }}>
-                      <Text style={{ fontWeight: 'bold', fontSize: 30 }}>{item.name}</Text>
+                    <View style={{ height: 35 }}>
+                      <Text style={{ fontWeight: 'bold', fontSize: 28 }}>{item.name}</Text>
 
                     </View>
 
-                    <Text style={{ fontSize: 30 }}>Price: ${item.price}</Text>
+                    <Text style={{ fontSize: 20 }}>${item.price}</Text>
 
 
                   </TouchableOpacity>
