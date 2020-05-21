@@ -85,7 +85,7 @@ export default class RecordScreen extends Component {
                                 <View style={styles.row}>
                                     <View style={styles.title}>
                                         <Text style={styles.titleText}>
-                                            Invoice No.: 
+                                            Invoice No.
                                         </Text>
                                     </View>
                                     <View style={styles.content}>
@@ -98,7 +98,7 @@ export default class RecordScreen extends Component {
                                 <View style={styles.row}>
                                     <View style={styles.title}>
                                         <Text style={styles.titleText}>
-                                            Product: 
+                                            Product 
                                         </Text>
 
                                     </View>
@@ -113,7 +113,7 @@ export default class RecordScreen extends Component {
                                 <View style={styles.row}>
                                     <View style={styles.title}>
                                         <Text style={styles.titleText}>
-                                            Total: 
+                                            Total 
                                         </Text>
 
                                     </View>
@@ -128,7 +128,7 @@ export default class RecordScreen extends Component {
                                 <View style={styles.row}>
                                     <View style={styles.title}>
                                         <Text style={styles.titleText}>
-                                            Address: 
+                                            Address 
                                         </Text>
 
                                     </View>
@@ -142,7 +142,7 @@ export default class RecordScreen extends Component {
                                 <View style={styles.row}>
                                     <View style={styles.title}>
                                         <Text style={styles.titleText}>
-                                            Delivery Date: 
+                                            Delivery Date
                                         </Text>
 
                                     </View>
@@ -156,7 +156,7 @@ export default class RecordScreen extends Component {
                                 <View style={styles.row}>
                                     <View style={styles.title}>
                                         <Text style={styles.titleText}>
-                                            Delivery Time: 
+                                            Delivery Time
                                         </Text>
 
                                     </View>
