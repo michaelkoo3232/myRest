@@ -130,8 +130,8 @@ export default class ProductsScreen extends Component {
           translucent={true}
         />
         {/* header bar  */}
-        <View style={{ height: 40, backgroundColor: 'green' , justifyContent: 'center',flexDirection:"row"}}>
-          <Text style={{fontWeight:'bold',fontSize:20,color:'white'}}>Exclusively for fruit lovers</Text>
+        <View style={{ height: 40, backgroundColor: 'green' , alignItems: 'center'}}>
+          <Text style={{fontWeight:'bold',fontSize:20,color:'white',fontStyle:'italic'}}>Exclusively for fruit lovers </Text>
         </View>
         <View style={{ marginBottom: 0 ,backgroundColor: 'white'}}>
 
