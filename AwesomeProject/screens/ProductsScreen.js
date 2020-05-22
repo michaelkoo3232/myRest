@@ -121,7 +121,7 @@ export default class ProductsScreen extends Component {
     // render the product list
     const cols = 2;
     return (
-      <SafeAreaView style={{ flexDirection: 'column', backgroundColor: 'orange' }}>
+      <SafeAreaView style={{ flexDirection: 'column', backgroundColor: 'green' }}>
         {/* hiding status bar  */}
         <StatusBar
           backgroundColor="#b3e6ff"
@@ -130,11 +130,8 @@ export default class ProductsScreen extends Component {
           translucent={true}
         />
         {/* header bar  */}
-        <View style={{ height: 50, backgroundColor: 'orange' , justifyContent: 'space-between',flexDirection:"row"}}>
-          <Text style={{fontWeight:'bold',fontSize:20}}>Hi,{username}</Text>
-          <TouchableOpacity title="Press me" onPress={() => this.logout() } >
-                <Text style={{fontWeight:'bold',fontSize:20}}>Logout </Text>
-            </TouchableOpacity>
+        <View style={{ height: 40, backgroundColor: 'green' , justifyContent: 'center',flexDirection:"row"}}>
+          <Text style={{fontWeight:'bold',fontSize:20,color:'white'}}>Exclsuively for fruit lovers</Text>
         </View>
         <View style={{ marginBottom: 0 ,backgroundColor: 'white'}}>
 
