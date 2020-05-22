@@ -130,13 +130,13 @@ export default class ProductsScreen extends Component {
           translucent={true}
         />
         {/* header bar  */}
-        <View style={{ height: 100, backgroundColor: 'orange' , justifyContent: 'space-between',flexDirection:"row"}}>
+        <View style={{ height: 50, backgroundColor: 'orange' , justifyContent: 'space-between',flexDirection:"row"}}>
           <Text style={{fontWeight:'bold',fontSize:20}}>Hi,{username}</Text>
           <TouchableOpacity title="Press me" onPress={() => this.logout() } >
                 <Text style={{fontWeight:'bold',fontSize:20}}>Logout </Text>
             </TouchableOpacity>
         </View>
-        <View style={{ marginBottom: 200 ,backgroundColor: 'white'}}>
+        <View style={{ marginBottom: 0 ,backgroundColor: 'white'}}>
 
           <FlatList
             data={this.state.dataSource}
