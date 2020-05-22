@@ -131,7 +131,7 @@ export default class ProductsScreen extends Component {
         />
         {/* header bar  */}
         <View style={{ height: 40, backgroundColor: 'green' , justifyContent: 'center',flexDirection:"row"}}>
-          <Text style={{fontWeight:'bold',fontSize:20,color:'white'}}>Exclsuively for fruit lovers</Text>
+          <Text style={{fontWeight:'bold',fontSize:20,color:'white'}}>Exclusively for fruit lovers</Text>
         </View>
         <View style={{ marginBottom: 0 ,backgroundColor: 'white'}}>
 
