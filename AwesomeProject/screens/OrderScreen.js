@@ -272,6 +272,8 @@ export default class OrderScreen extends Component {
                 
                 <View >
                     <View style={{ flexDirection: 'column' }}>
+                    <View style={{ flex: 1, flexDirection: 'row', justifyContent: 'space-between' }}>
+                </View>
                         <View >
                             <Image
                                 style={{ width: this.state.width, height: this.state.height }}
@@ -283,13 +285,17 @@ export default class OrderScreen extends Component {
                             </TouchableOpacity>
                         <View style={{ backgroundColor: "orange" }}>
                             <View style={style.textContainer01}>
-                                <Text style={{ fontSize: 40, color: "white" }}> {selected_product.name} </Text>
+                            <View style={{flex: 1, paddingLeft:5}}>  
+                                <Text style={{ textAlign:'left',fontSize: 35, color: "white" }}> {selected_product.name}  </Text>
+                            </View>
+                            <View style={{flex: 1, paddingRight:5}}>  
+                                <Text style={{ textAlign:'right',fontSize: 35, color: "white" }}> ${selected_product.price} </Text>
+                            </View>
                             </View>
                         </View>
                         <View style={style.textContainer}>
                             <Text style={style.text02}>{selected_product.description}</Text>
                             <Text style={style.text01}>{selected_product.quantity} left in stock</Text>
-                            <Text style={style.text01}>${selected_product.price}</Text>
                         </View>
                         <View style={style.textContainer}>
                             <Text style={style.text01}>Quantity</Text>
@@ -441,14 +447,19 @@ const style = StyleSheet.create({
         paddingLeft: 10
     },
     textContainer01: {
+        paddingTop: 8,
+        paddingBottom: 8,
+        flex: 1,
+        flexDirection:"row",
+        justifyContent: "space-between"
     },
     text01: {
         fontSize: 20
     },
     text02: {
-        fontSize: 20,
-        color: "grey"
-    
+        fontSize: 15,
+        color: "grey",
+        paddingBottom: 8
     },
     dateContainer: {
         paddingRight: 20,
