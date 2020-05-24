@@ -89,13 +89,13 @@ export default class RegisterScreen extends Component {
       <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
       <ImageBackground
         // using a ImageBackground to render a image in assets folder
-        source={require("../assets/images/login_bg.jpeg")}
+        source={require("../assets/images/bg.jpg")}
         style={styles.imageBG}
       >
         <ScrollView contentContainerStyle={styles.container}>
           <Image
             // using an <Imgae> to add a login image
-            source={require("../assets/images/icon.png")}
+            source={require("../assets/images/icon5.png")}
             // using direct style assign width: "50%", height: "50%",
             style={{
               resizeMode: "contain",

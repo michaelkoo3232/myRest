@@ -90,7 +90,7 @@ export default class HomeScreen extends Component {
           translucent={true}
         />
       <ImageBackground
-        source={require("../assets/images/login_bg.jpeg")}
+        source={require("../assets/images/bg.jpg")}
         style={styles.imageBackground}
         // https://facebook.github.io/react-native/docs/imagebackground
       >
@@ -99,7 +99,7 @@ export default class HomeScreen extends Component {
             // <Image> component displaying different types of images, 
             // including network images, static resources, temporary local images,
             // and images from local disk, such as the camera roll.
-            source={require("../assets/images/icon.png")}
+            source={require("../assets/images/icon5.png")}
             // use style defined below
             style={styles.loginLogo}
             // https://facebook.github.io/react-native/docs/image
