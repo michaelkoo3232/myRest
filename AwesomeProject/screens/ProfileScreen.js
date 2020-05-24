@@ -47,18 +47,27 @@ export default class RegisterScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.textContainer01}>
-          <Text style={{ fontWeight: 'bold', fontSize: 20, alignSelf: 'flex-start' }}>Hi,{this.state.username}</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 28, alignSelf: 'flex-start', color: "yellowgreen" }}>Welcome, {this.state.username}!</Text>
 
         </View>
         <View style={styles.card}>
           <Card >
             <View style={styles.cardContainer}>
               <View style={styles.header}>
-                <Image style={styles.logo} source={require("../assets/images/icon.png")} />
-                <Text> Fruit Planet </Text>
+                <Image style={styles.logo} source={require("../assets/images/icon.png")} /> 
               </View>
+
               <View style={styles.Description}>
-                <View style={styles.textBox00}>
+              <View style={styles.textBox01}>
+              <Text style={{ fontWeight: 'bold', fontSize: 20 }}>Message from Fruit Planet</Text>
+                </View>
+              </View>
+
+              <View style={styles.Description}>
+              <View style={styles.textBox00}>
+                <Text>Hi {this.state.username},</Text>
+              </View>
+              <View style={styles.textBox00}>
                   <Text>
                     Thanks for supporting us! Our goal is to deliver the fresh fruit from all over the world to your doorstep.
                  </Text>
@@ -105,7 +114,6 @@ const styles = StyleSheet.create({
   },
 
   textContainer01: {
-
     flexDirection: "row",
     justifyContent: "space-between"
   },
@@ -113,11 +121,12 @@ const styles = StyleSheet.create({
     paddingTop: 50
   },
   logo: {
-    height: 50,
-    width: 50,
+    height: 100,
+    width: 100
   },
   cardContainer: {
-
+    paddingTop:10,
+    paddingBottom:10,
     flexDirection: "column",
     justifyContent: "space-around"
   },
@@ -126,9 +135,16 @@ const styles = StyleSheet.create({
     justifyContent: "space-between"
   },
   textBox00: {
+    paddingTop:5,
+    paddingBottom:5,
+    paddingLeft:10,
+    paddingRight:10
+  },
+  textBox01: {
     paddingTop:10,
-    paddingBottom:10
+    paddingBottom:5,
+    paddingLeft:10,
+    paddingRight:10
   }
-
 
 })

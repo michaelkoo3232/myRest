@@ -259,8 +259,8 @@ export default class OrderScreen extends Component {
             // If selected product is empty, show no product message
             contentView = (
                 <View style={{ alignItems: "center", justifyContent: "center", marginTop: this.state.height }}>
-                    <Text> No product selected! </Text>
-                    <Text> Please select a product from list first! </Text>
+                    <Text style={{fontSize:25}}> No product selected! </Text>
+                    <Text style={{fontSize:20}}> Please select a product from list first! </Text>
                 </View>
             );
         } else {
@@ -283,7 +283,7 @@ export default class OrderScreen extends Component {
                         <TouchableOpacity>
                                 <Image Srouce={require("../assets/images/arrow-ios-back.png")} style={{width:50,height:50}}></Image>
                             </TouchableOpacity>
-                        <View style={{ backgroundColor: "orange" }}>
+                        <View style={{ backgroundColor: "green" }}>
                             <View style={style.textContainer01}>
                             <View style={{flex: 1, paddingLeft:5}}>  
                                 <Text style={{ textAlign:'left',fontSize: 35, color: "white" }}> {selected_product.name}  </Text>

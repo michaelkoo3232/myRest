@@ -231,7 +231,8 @@ const styles = StyleSheet.create({
         fontWeight: "bold",
         fontSize: 30,
         marginVertical: 5,
-        marginHorizontal: 15
+        marginHorizontal: 15,
+        color: "yellowgreen"
 
     }
 

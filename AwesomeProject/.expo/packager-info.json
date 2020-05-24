@@ -2,9 +2,9 @@
   "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 8723,
+  "packagerPid": 11934,
   "expoServerNgrokUrl": "https://ra-ci7.anonymous.awesomeproject.exp.direct",
   "packagerNgrokUrl": "https://packager.ra-ci7.anonymous.awesomeproject.exp.direct",
-  "ngrokPid": 8741,
+  "ngrokPid": 11944,
   "webpackServerPort": null
 }

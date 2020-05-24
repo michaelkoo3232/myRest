@@ -122,7 +122,7 @@ export default class ProductsScreen extends Component {
     // render the product list
     const cols = 2;
     return (
-      <SafeAreaView style={{ flexDirection: 'column', backgroundColor: 'green' }}>
+      <SafeAreaView style={{ flexDirection: 'column', backgroundColor: 'yellowgreen' }}>
         {/* hiding status bar  */}
         <StatusBar
           backgroundColor="#b3e6ff"
@@ -131,7 +131,7 @@ export default class ProductsScreen extends Component {
           translucent={true}
         />
         {/* header bar  */}
-        <View style={{ height: 40, backgroundColor: 'green', alignItems: 'center' }}>
+        <View style={{ height: 40, backgroundColor: 'yellowgreen', alignItems: 'center' }}>
           <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', fontStyle: 'italic' }}>Exclusively for fruit lovers </Text>
         </View>
         <View style={{ marginBottom: 80, backgroundColor: 'white' }}>
