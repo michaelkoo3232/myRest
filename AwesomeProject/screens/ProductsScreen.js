@@ -63,6 +63,7 @@ export default class ProductsScreen extends Component {
       });
     }
 
+
     return get_products_list().then(response => {
       if (response.detail == "Invalid token.") {
         this.props.navigation.navigate('Login');
@@ -101,7 +102,7 @@ export default class ProductsScreen extends Component {
       product_id: item_id
     });
   }
-  
+
 
 
   // this is the main function to display a page
@@ -130,17 +131,17 @@ export default class ProductsScreen extends Component {
           translucent={true}
         />
         {/* header bar  */}
-        <View style={{ height: 40, backgroundColor: 'green' , alignItems: 'center'}}>
-          <Text style={{fontWeight:'bold',fontSize:20,color:'white',fontStyle:'italic'}}>Exclusively for fruit lovers </Text>
+        <View style={{ height: 40, backgroundColor: 'green', alignItems: 'center' }}>
+          <Text style={{ fontWeight: 'bold', fontSize: 20, color: 'white', fontStyle: 'italic' }}>Exclusively for fruit lovers </Text>
         </View>
-        <View style={{ marginBottom: 0 ,backgroundColor: 'white'}}>
+        <View style={{ marginBottom: 80, backgroundColor: 'white' }}>
 
           <FlatList
             data={this.state.dataSource}
             keyExtractor={item => item.name}
             horizontal={false}
             numColumns={cols}
-
+            
             renderItem={({ item }) => (
               <View >
                 <Card style={{ padding: 10, margin: 10, width: this.state.width }}>
@@ -163,7 +164,7 @@ export default class ProductsScreen extends Component {
             )}
           />
 
-      </View>
+        </View>
       </SafeAreaView>
     )
   }

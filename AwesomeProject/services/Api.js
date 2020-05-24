@@ -1,6 +1,6 @@
 import { AsyncStorage } from "react-native";
 
-var BASE_API_URL = "http://192.168.0.148:8000/";
+var BASE_API_URL = "http://192.168.0.186:8000/";
 var API_TOKEN = "Token c0f4ebdcbdf194dc6ca4e85caf81d0ea923290a2";
 
 export const login = (username, password) => {
@@ -99,6 +99,7 @@ export const cancel_order = (payment_token) => {
   return fetch(url)
     .then(response => console.log("Order cancelled"))
 }
+
 
 export const get_products_list = async () => {
   var url = BASE_API_URL + "products/";

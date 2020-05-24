@@ -1,10 +1,9 @@
 {
-  "expoServerNgrokUrl": "https://bd-3ma.anonymous.awesomeproject.exp.direct",
-  "packagerNgrokUrl": "https://packager.bd-3ma.anonymous.awesomeproject.exp.direct",
-  "ngrokPid": 982,
+  "devToolsPort": 19002,
   "expoServerPort": 19000,
   "packagerPort": 19001,
-  "packagerPid": 942,
-  "webpackServerPort": null,
-  "devToolsPort": 19002
+  "packagerPid": 10192,
+  "expoServerNgrokUrl": "https://bd-3ma.anonymous.awesomeproject.exp.direct",
+  "packagerNgrokUrl": "https://packager.bd-3ma.anonymous.awesomeproject.exp.direct",
+  "ngrokPid": 7720
 }
