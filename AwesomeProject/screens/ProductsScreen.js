@@ -71,7 +71,7 @@ export default class ProductsScreen extends Component {
       if (this.componentsMounted) {
         this.setState({
           isLoading: false,
-          dataSource: response.results,
+          dataSource: response,
           refreshing: false,
         });
       }

@@ -1,6 +1,6 @@
 import { AsyncStorage } from "react-native";
 
-var BASE_API_URL = "http://192.168.0.186:8000/";
+var BASE_API_URL = "http://192.168.1.196:8000/";
 var API_TOKEN = "Token c0f4ebdcbdf194dc6ca4e85caf81d0ea923290a2";
 
 export const login = (username, password) => {
@@ -106,21 +106,30 @@ export const get_products_list = async () => {
   console.log("GET : " + url);
   token = "Token " + (await get_user_info("user_token"));
   console.log(token);
-  return fetch(url, {
+  var productList = [];
+
+  while(url != null) {
+    var responseRaw = await fetch(url, {
       method: "GET",
       headers: {
         "Content-Type": "application/json",
         "Authorization": token
       }
-    })
-    .then(response => response.json())
-    .then(responseJson => {
-      console.log("successful.")
-      return responseJson;
-    })
-    .catch(error => {
-      console.error("GET product list failure:\n" + error);
+    }
+    ).catch(error => {
+        console.error("GET product list failure:\n" + error);
     });
+    var res = await responseRaw.json()
+
+    for (var i = 0 ; i < res.results.length; i++){
+      productList.push(res.results[i]);
+      console.log(i);
+    }
+    url = res.next;
+  }
+  console.log(productList.length);
+  return productList;
+ 
 };
 
 export const get_product_detail = async (product_id) => {
