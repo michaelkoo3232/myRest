@@ -283,7 +283,7 @@ export default class OrderScreen extends Component {
                         <TouchableOpacity>
                                 <Image Srouce={require("../assets/images/arrow-ios-back.png")} style={{width:50,height:50}}></Image>
                             </TouchableOpacity>
-                        <View style={{ backgroundColor: "green" }}>
+                        <View style={{ backgroundColor: "yellowgreen" }}>
                             <View style={style.textContainer01}>
                             <View style={{flex: 1, paddingLeft:5}}>  
                                 <Text style={{ textAlign:'left',fontSize: 35, color: "white" }}> {selected_product.name}  </Text>
