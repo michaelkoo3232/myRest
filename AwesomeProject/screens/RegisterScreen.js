@@ -8,6 +8,8 @@ import {
   View,
   ScrollView,
   KeyboardAvoidingView,
+  StatusBar,
+  Platform
 } from "react-native";
 import {
   Button,
@@ -86,7 +88,7 @@ export default class RegisterScreen extends Component {
     }
 
     return (
-      <KeyboardAvoidingView style={styles.container} behavior="padding" enabled>
+      <KeyboardAvoidingView style={styles.container} behavior={Platform.OS == "ios" ? "padding" : "height"}>
       <ImageBackground
         // using a ImageBackground to render a image in assets folder
         source={require("../assets/images/bg.jpg")}
@@ -188,7 +190,6 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginVertical: 20
   },
   // Following are input fields styles
   inputContainer: {
