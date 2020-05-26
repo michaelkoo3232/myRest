@@ -182,7 +182,7 @@ export default class OrderScreen extends Component {
         if (total_amount == 0 || order_quantity == 0) {
             Alert.alert(
                 'Warning',
-                'Please input your quantity',
+                'Please input your quantity!',
                 [
                     { text: 'OK' },
                 ], { cancelable: false },
