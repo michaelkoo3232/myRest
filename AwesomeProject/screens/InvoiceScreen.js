@@ -1,5 +1,5 @@
 import { get_orders_list } from '../services/Api';
-import { StyleSheet, ScrollView, AsyncStorage, View, Text, SafeAreaView } from 'react-native';
+import { StyleSheet, ScrollView, AsyncStorage, View, Text, SafeAreaView,  RefreshControl} from 'react-native';
 import React, { useState, Component } from "react";
 import { Card, CardTitle, CardContent } from 'react-native-elements';
 export default class RecordScreen extends Component {
@@ -8,7 +8,7 @@ export default class RecordScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            refreshing: false,
 
         }
 
@@ -51,10 +51,26 @@ export default class RecordScreen extends Component {
                 }
             );
         });
-
-
-
     }
+    _onRefresh = () => {
+        console.log("On refresh")
+        this.setState({refreshing: true});
+        get_orders_list().then(response => {
+            response.json().then(
+                jsonText => {
+                    console.log("Fetch result");
+                    console.log(jsonText.results[0].customer.username);
+                    //   console.log(typeof jsonText);
+                    this.setState({
+                        recordList: jsonText.results,
+                        isLoadedDoctor: true,
+                        refreshing: false,
+                    });
+                }
+            );
+        });
+    }
+  
 
 
 
@@ -69,7 +85,7 @@ export default class RecordScreen extends Component {
             if (this.state.recordList) {
 
                 for (i = 0; i < this.state.recordList.length; i++) {
-                    console.log(this.state.recordList[i]);
+                    // console.log(this.state.recordList[i]);
                     var row = this.state.recordList[i];
                     var customer = row.customer;
                     var product = row.product;
@@ -193,19 +209,27 @@ export default class RecordScreen extends Component {
             }
             return recordInfo;
         }
-        return (
-            <SafeAreaView style={{ flexDirection: 'column', backgroundColor: 'white' }}>
+        return (    
+            <SafeAreaView style={{ flexDirection: 'column', backgroundColor: 'white' }}>  
                 <View>
                     <Text style={styles.headingText}>
                         Order Record:
                     </Text>
                 </View>
-                <ScrollView >
-                    {generaterecord()}
+                
+                <ScrollView 
+                    refreshControl={
+                        <RefreshControl
+                          refreshing={this.state.refreshing}
+                          onRefresh={this._onRefresh}
+                        />
+                      }
+                >
+                    {generaterecord()}                
                 </ScrollView>
-
+               
             </SafeAreaView>
-
+           
         )
     }
 }
