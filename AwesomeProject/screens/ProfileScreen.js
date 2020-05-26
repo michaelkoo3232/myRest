@@ -47,7 +47,7 @@ export default class RegisterScreen extends Component {
     return (
       <View style={styles.container}>
         <View style={styles.textContainer01}>
-          <Text style={{ fontWeight: 'bold', fontSize: 28, alignSelf: 'flex-start', color: "yellowgreen" }}>Welcome, {this.state.username}!</Text>
+          <Text style={{ fontWeight: 'bold', fontSize: 28, alignSelf: 'flex-start', color: "mediumorchid" }}>Welcome, {this.state.username}!</Text>
 
         </View>
         <View style={styles.card}>

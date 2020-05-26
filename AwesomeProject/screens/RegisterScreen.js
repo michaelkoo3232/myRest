@@ -91,7 +91,7 @@ export default class RegisterScreen extends Component {
       <KeyboardAvoidingView style={styles.container} behavior={Platform.OS == "ios" ? "padding" : "height"}>
       <ImageBackground
         // using a ImageBackground to render a image in assets folder
-        source={require("../assets/images/bg.jpg")}
+        source={require("../assets/images/bg1.jpeg")}
         style={styles.imageBG}
       >
         <ScrollView contentContainerStyle={styles.container}>

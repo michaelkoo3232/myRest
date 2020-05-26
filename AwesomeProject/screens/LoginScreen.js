@@ -90,7 +90,7 @@ export default class HomeScreen extends Component {
           translucent={true}
         />
       <ImageBackground
-        source={require("../assets/images/bg.jpg")}
+        source={require("../assets/images/bg1.jpeg")}
         style={styles.imageBackground}
         // https://facebook.github.io/react-native/docs/imagebackground
       >

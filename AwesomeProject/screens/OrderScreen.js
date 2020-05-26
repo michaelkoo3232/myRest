@@ -260,7 +260,7 @@ export default class OrderScreen extends Component {
             contentView = (
                 <View style={{ alignItems: "center", justifyContent: "center", marginTop: this.state.height }}>
                     <Text style={{fontSize:25}}> No product selected! </Text>
-                    <Text style={{fontSize:20}}> Please select a product from list first! </Text>
+                    <Text style={{fontSize:20}}> Please select a fruit first! </Text>
                 </View>
             );
         } else {
@@ -283,7 +283,7 @@ export default class OrderScreen extends Component {
                         <TouchableOpacity>
                                 <Image Srouce={require("../assets/images/arrow-ios-back.png")} style={{width:50,height:50}}></Image>
                             </TouchableOpacity>
-                        <View style={{ backgroundColor: "yellowgreen" }}>
+                        <View style={{ backgroundColor: "mediumorchid" }}>
                             <View style={style.textContainer01}>
                             <View style={{flex: 1, paddingLeft:5}}>  
                                 <Text style={{ textAlign:'left',fontSize: 35, color: "white" }}> {selected_product.name}  </Text>

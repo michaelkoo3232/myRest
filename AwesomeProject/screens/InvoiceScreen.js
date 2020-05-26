@@ -256,7 +256,7 @@ const styles = StyleSheet.create({
         fontSize: 30,
         marginVertical: 5,
         marginHorizontal: 15,
-        color: "yellowgreen"
+        color: "mediumorchid"
 
     }
 
